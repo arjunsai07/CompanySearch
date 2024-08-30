@@ -8,7 +8,7 @@ from langchain.chains import SequentialChain
 from langchain.memory import ConversationBufferMemory
 import streamlit as st
 
-os.environ['OPENAI_API_KEY']=openai_key
+#os.environ['OPENAI_API_KEY']=openai_key
 
 #streamlit framework
 st.title('Company Search')
