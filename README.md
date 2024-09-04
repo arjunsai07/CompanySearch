@@ -1,4 +1,4 @@
-Company Search with LangChain, OpenAI APIs & Streamlit
+###Company Search with LangChain, OpenAI APIs & Streamlit
 
 I'm pleased to share my latest mini-project: "Company Search," a Streamlit app that leverages the power of OpenAI's language models (LLMs) to understand information on Companies.
 
