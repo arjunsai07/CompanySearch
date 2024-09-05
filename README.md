@@ -1,5 +1,5 @@
-# CompanySearch
-CompanySearch
+# Company Search- uses LangChain
+Company Search
 
 Company Search with LangChain, OpenAI APIs & Streamlit
 
