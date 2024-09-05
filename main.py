@@ -25,14 +25,14 @@ st.write(f"Using OpenAI model: {llm.model_name}")
 
 #Prompt Templates, every prompt template will have an LLM Chain
 first_input_prompt=PromptTemplate(input_variables=['company_name'],template='Tell me about the company {company_name}')
-chain1=LLMChain(llm=llm,prompt=first_input_prompt,verbose=True,output_key='company_details',memory=company_details_mem) #revenue of the company will be mapped to revenue
+chain1=LLMChain(llm=llm,prompt=first_input_prompt,verbose=True,output_key='company_details',memory=company_details_mem) #details of the company will be mapped to company_details
 
 #Prompt Templates, every prompt template will have an LLM Chain
 second_input_prompt=PromptTemplate(input_variables=['company_details'],template='what was {company_details}\'s highest stock price in 2021?')
-chain2=LLMChain(llm=llm,prompt=second_input_prompt,verbose=True,output_key='highest_stock_price_2021',memory=company_revenue_mem) #name of the celebrity will be mapped to person
+chain2=LLMChain(llm=llm,prompt=second_input_prompt,verbose=True,output_key='highest_stock_price_2021',memory=company_revenue_mem) #highest stock price of 2021 will be mapped
 
 third_input_prompt=PromptTemplate(input_variables=['highest_stock_price_2021'],template='What other companies secured more stock price than {highest_stock_price_2021} in 2021?')
-chain3=LLMChain(llm=llm,prompt=third_input_prompt,verbose=True,output_key='better_companies_of_2021',memory=highest_stock_2021_memory) #name of the celebrity will be mapped to person
+chain3=LLMChain(llm=llm,prompt=third_input_prompt,verbose=True,output_key='better_companies_of_2021',memory=highest_stock_2021_memory) #companies better placed in stock prices in 2021
 
 #parent_chain=SimpleSequentialChain(chains=[chain1,chain2],verbose=True)
 
